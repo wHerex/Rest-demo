@@ -38,7 +38,7 @@ public class UserService {
         if(exist) {
             userRepository.updateCounterByLogin(login);
         }else {
-            userRepository.save(new History(login, 1));
+            userRepository.save(new History(login));
         }
     }
     

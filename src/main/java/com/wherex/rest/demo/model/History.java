@@ -9,10 +9,15 @@ import javax.persistence.Id;
 
 @Entity
 @Getter
-@AllArgsConstructor
 @NoArgsConstructor
 public class History {
+
     @Id
     private String login;
     private long counter;
+
+    public History(String login){
+        this.login = login;
+        counter = 1;
+    }
 }
