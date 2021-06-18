@@ -16,6 +16,6 @@ public interface UserRepository extends JpaRepository<RequestCounter, String> {
 
     @Modifying
     @Transactional
-    @Query("UPDATE RequestCounter h SET h.counter = (h.counter + 1) WHERE h.login =:login")
+    @Query("UPDATE request_counters rq SET rq.counter = (rq.counter + 1) WHERE rq.login =:login")
     void updateCounterByLogin(@Param("login") String login);
 }
