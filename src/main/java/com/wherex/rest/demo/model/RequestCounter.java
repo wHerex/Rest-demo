@@ -9,13 +9,13 @@ import javax.persistence.Id;
 @Entity
 @Getter
 @NoArgsConstructor
-public class History {
+public class RequestCounter {
 
     @Id
     private String login;
     private long counter;
 
-    public History(String login){
+    public RequestCounter(String login) {
         this.login = login;
         counter = 1;
     }

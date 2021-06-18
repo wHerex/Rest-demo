@@ -1,6 +1,6 @@
 package com.wherex.rest.demo.service;
 
-import com.wherex.rest.demo.model.History;
+import com.wherex.rest.demo.model.RequestCounter;
 import com.wherex.rest.demo.model.User;
 import com.wherex.rest.demo.repository.UserRepository;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -38,7 +38,7 @@ public class UserService {
         if(exist) {
             userRepository.updateCounterByLogin(login);
         }else {
-            userRepository.save(new History(login));
+            userRepository.save(new RequestCounter(login));
         }
     }
     
